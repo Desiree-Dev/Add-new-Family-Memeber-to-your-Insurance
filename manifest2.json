@@ -1,0 +1,117 @@
+{
+    "_version": "1.17.0",
+    "sap.app": {
+        "id": "Add.new.Family.Memeber.to.your.Insurance",
+        "type": "card",
+        "title": "Add a new Family Memeber to your Insurance",
+        "subTitle": "Crystal Zhang",
+        "applicationVersion": {
+            "version": "1.1.0"
+        },
+        "shortTitle": "A short title for this Card",
+        "info": "Additional information about this Card",
+        "description": "A long description for this Card",
+        "tags": {
+            "keywords": [
+                "Adaptive",
+                "Card",
+                "Form",
+                "Sample",
+                "Submit",
+                "Actions"
+            ]
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "icons": {
+            "icon": "sap-icon://add-contact"
+        }
+    },
+    "sap.card": {
+        "configuration": {
+            "actionHandlers": {
+                "submit": {
+                    "url": "./samples/adaptive/action-submit.json",
+                    "method": "GET"
+                }
+            }
+        },
+        "type": "AdaptiveCard",
+        "header": {
+            "title": "Add a New Family Member to your Insurance",
+            "icon": {
+                "src": "sap-icon://add-contact"
+            },
+            "actions": [
+                {
+                    "parameters": {
+                        "key": ""
+                    }
+                }
+            ]
+        },
+        "content": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.0",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "text": "Name:",
+                    "isSubtle": true,
+                    "size": "medium"
+                },
+                {
+                    "type": "Input.Text",
+                    "placeholder": "First name, Last name",
+                    "style": "text",
+                    "id": "SimpleVal"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Date of Birth:",
+                    "isSubtle": true,
+                    "size": "medium"
+                },
+                {
+                    "type": "Input.Date",
+                    "placeholder": "youremail@example.com",
+                    "style": "email",
+                    "id": "EmailVal"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Birth Certificate:",
+                    "isSubtle": true,
+                    "size": "medium"
+                },
+                {
+                    "type": "Input.Text",
+                    "placeholder": "",
+                    "style": "tel",
+                    "id": "TelVal",
+                    "maxLength": 11
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Take a Picture"
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Upload a File"
+                }
+            ]
+        }
+    },
+    "sap.platform.mobilecards": {
+        "compatible": true
+    }
+}
